@@ -1,0 +1,39 @@
+name: Update publication metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 20 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch Google Scholar citations and GitHub stars
+        run: node scripts/update-metrics.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SCHOLAR_USER_ID: j4xiRjIAAAAJ
+
+      - name: Commit updated metrics
+        run: |
+          if git diff --quiet -- shared/metrics.json; then
+            echo "No metrics changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shared/metrics.json
+          git commit --amend --no-edit
+          git push --force-with-lease
