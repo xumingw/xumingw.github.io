@@ -1,0 +1,44 @@
+{
+  "updatedAt": "2026-10-23T23:07:19.511Z",
+  "sources": {
+    "googleScholarProfile": "https://scholar.google.com/citations?user=j4xiRjIAAAAJ&hl=en",
+    "github": "https://api.github.com/repos/{owner}/{repo}"
+  },
+  "papers": {
+    "wam-diff2": {
+      "citations": 0
+    },
+    "wam-flow": {
+      "githubRepo": "fudan-generative-vision/WAM-Flow",
+      "citations": 22,
+      "stars": 371
+    },
+    "wam-diff": {
+      "githubRepo": "fudan-generative-vision/WAM-Diff",
+      "citations": 18,
+      "stars": 300
+    },
+    "hallo4": {
+      "githubRepo": "fudan-generative-vision/hallo4",
+      "citations": 19,
+      "stars": 40
+    },
+    "openhumanvid": {
+      "citations": 90
+    },
+    "tdsc-abus": {
+      "citations": 26
+    },
+    "graph-rls-abus": {
+      "citations": 3
+    },
+    "hallo": {
+      "githubRepo": "fudan-generative-vision/hallo",
+      "citations": 176,
+      "stars": 8672
+    },
+    "dual-capsvit": {
+      "citations": 6
+    }
+  }
+}
