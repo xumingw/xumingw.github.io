@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mingwang Xu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/home.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <div class="shell">
+    <aside>
+      <div class="portrait" id="portrait"></div>
+      <div class="name" id="m-name"></div>
+      <div class="role" id="m-role"></div>
+      <div class="aff" id="m-aff"></div>
+      <nav class="jump" id="jump">
+        <a href="#about"><span class="tick"></span>About</a>
+        <a href="#publications"><span class="tick"></span>Publications</a>
+        <a href="#awards"><span class="tick"></span>Awards</a>
+        <a href="#experience"><span class="tick"></span>Experience</a>
+        <a href="#contact"><span class="tick"></span>Contact</a>
+      </nav>
+      <div class="spacer"></div>
+      <div class="contact" id="m-contact"></div>
+    </aside>
+
+    <main>
+      <section class="hero reveal" id="top">
+        <div class="topkick">
+          <span class="label"><span class="dot">●</span> PhD Student · Computer Science</span>
+          <span class="label" id="m-loc">Shanghai, China</span>
+        </div>
+        <h1 id="hero-h1"></h1>
+        <p class="sub" id="hero-sub"></p>
+
+        <div class="marquee"><div class="track" id="marquee-track"></div></div>
+
+        <div class="stats" id="stats"></div>
+      </section>
+
+      <section id="about" class="reveal">
+        <div class="sec-head"><span class="idx">01</span><h2>About</h2><span class="rule"></span></div>
+        <div class="about-grid">
+          <div class="about" id="about-body"></div>
+          <div class="aside-card">
+            <div class="ac-label">Research Interests</div>
+            <div class="interests" id="about-interests"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="reveal">
+        <div class="sec-head"><span class="idx">02</span><h2>Publications</h2><span class="rule"></span></div>
+        <div class="filters">
+          <div class="filter-row"><span class="label">Topic</span><div id="topic-filters" style="display:flex;flex-wrap:wrap;gap:8px;"></div></div>
+          <div class="filter-row"><span class="label">Year</span><div id="year-filters" style="display:flex;flex-wrap:wrap;gap:8px;"></div></div>
+        </div>
+        <div id="pub-list"></div>
+      </section>
+
+      <section id="awards" class="reveal">
+        <div class="sec-head"><span class="idx">03</span><h2>Awards &amp; Honors</h2><span class="rule"></span></div>
+        <div class="awards-grid" id="awards-list"></div>
+      </section>
+
+      <section id="experience" class="reveal">
+        <div class="sec-head"><span class="idx">04</span><h2>Education &amp; Experience</h2><span class="rule"></span></div>
+        <div class="twocol">
+          <div><div class="col-h">Education</div><div id="edu-list"></div></div>
+          <div><div class="col-h">Experience</div><div id="exp-list"></div></div>
+        </div>
+      </section>
+
+      <footer id="contact" class="reveal">
+        <div class="big">Contact me — <a id="m-email"></a></div>
+        <div class="flinks" id="m-flinks"></div>
+        <div class="colophon">© 2026 Mingwang Xu</div>
+      </footer>
+    </main>
+  </div>
+
+<script src="shared/data.js"></script>
+<script src="shared/home.js"></script>
+</body>
+</html>
